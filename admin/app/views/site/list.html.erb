@@ -1,0 +1,119 @@
+<% content_for :title, "サイトリスト" %>
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "scss/tables" %>
+<% end %>
+
+<div id="pad-wrapper">
+	<div class="table-wrapper products-table section">
+		<div class="head">
+			<div class="span12">
+				<h3>サイト一覧</h3>
+			</div>
+		</div>
+		<div class="filter-block">
+			<div class="pull-right">
+				<a href="site_new.html" class="btn-flat success new-product">+ サイトを登録</a>
+			</div>
+		</div>
+		<div class="">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th class="">サイト名</th>
+						<th class="">
+							<span class="line"></span>
+							データ取得状況
+						</th>
+						<th class="">
+							<span class="line"></span>
+							コンバージョン取得状況
+						</th>
+						<th class="">
+							<span class="line"></span>
+							クーポン配信設定
+						</th>
+						<th class="">
+							<span class="line"></span>
+							配信中クーポン数
+						</th>
+						<th>
+							<span class="line"></span>
+							操作
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- row -->
+					<tr class="first">
+						<td>
+							<a href="#" class="name">Strapya</a>
+						</td>
+						<td>
+							<span class="label label-success">正常に取得中</span>
+						</td>
+						<td>
+							<span class="label label-success">正常に取得中</span>
+						</td>
+						<td>
+							<span class="label label-success">配信可能</span>
+						</td>
+						<td>3</td>
+						<td class="sitecog"> <i class="icon-cog"></i>
+						</td>
+						<td>
+							<a href="index.html" class="btn-flat primary">ダッシュボードへ</a>
+						</td>
+					</tr>
+					<!-- row -->
+					<tr>
+						<td>
+							<a href="#" class="name">Strapya</a>
+						</td>
+						<td>
+							<span class="label label-success">正常に取得中</span>
+						</td>
+						<td>
+							<span class="label label-success">正常に取得中</span>
+						</td>
+						<td>
+							<span class="label label-success">配信可能</span>
+						</td>
+						<td>3</td>
+						<td class="sitecog"> <i class="icon-cog"></i>
+						</td>
+						<td>
+							<a href="index.html" class="btn-flat primary">ダッシュボードへ</a>
+						</td>
+					</tr>
+
+					<!-- row -->
+					<tr>
+						<td>
+							<a href="#" class="name">Strapya</a>
+						</td>
+						<td>
+							<span class="label label-success">正常に取得中</span>
+						</td>
+						<td>
+							<span class="label label-failed">取得停止中</span>
+						</td>
+						<td>
+							<span class="label label-failed">配信不可</span>
+						</td>
+						<td>3</td>
+						<td class="sitecog">
+							<i class="icon-cog"></i>
+						</td>
+						<td>
+							<a href="index.html" class="btn-flat primary">ダッシュボードへ</a>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,16 @@
+@import "font-awesome";
+
+.login-wrapper .form-holizontal .form-group{
+	min-height: 50px;
+	text-align: left;
+	label{
+		line-height: 40px;
+		text-align: right;
+		font-size: 14px;
+	}
+	span{
+		display: block;
+		float: left;
+		margin-bottom: 15px;
+	}
+}

@@ -1,0 +1,44 @@
+<% content_for :title, "ログイン" %>
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "scss/signin" %>
+<% end %>
+
+
+<div class="login-wrapper">
+    <a href="index.html">
+        <img class="logo" src="/assets/logo-white.png">
+    </a>
+
+    <div class="box">
+        <div class="content-wrap">
+            <h6>ようこそ</h6>
+            <form action="login_submit" method="get" accept-charset="utf-8" class="form-holizontal">
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label" for="">メールアドレス</label>
+                <div class="col-sm-8">
+                   <input class="form-control" type="text" placeholder="メールアドレス">
+               </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label" for="">パスワード</label>
+                <div class="col-sm-8">
+                    <input class="form-control" type="password" placeholder="パスワード">
+                </div>
+            </div>
+        <%= link_to "パスワードをお忘れですか？", users_reminder_path ,:class => "forgot"%>
+            <div class="remember col-sm-offset-4 col-sm-8">
+                <input id="remember-me" type="checkbox">
+                <label for="remember-me">ログイン状態を保存する</label>
+            </div>
+            <a class="btn-glow primary login" href="index.html">ログイン</a>
+            </form>
+        </div>
+    </div>
+
+    <div class="no-account">
+        <p>ユーザー登録はお済みですか？</p>
+        <%= link_to "ユーザー登録", users_signup_path%>
+    </div>
+</div>
