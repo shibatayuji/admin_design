@@ -304,13 +304,21 @@ margin:20px 20px;
 	font-size: 13px;
 }
 
-
-
+.datepick{
+span{
+	font-size: 15px;
+	margin-right: 5px;
+}
+.form-control{
+	display: inline-block;
+	width: 180px;
+}
 
 
 .analytics{
 	h4{
 		margin-bottom: 20px;
+	}
 	}
 
 	.stats{
@@ -401,3 +409,31 @@ margin:20px 20px;
 	}
 }
 
+.navbar-inverse{
+	background: url("/assets/bgs/pw_maze_black.png") repeat;
+}
+
+.addnew{
+	span{
+		margin-right:10px;
+	}
+	.btn-flat{
+		font-weight: 700;
+		font-size: 14px;
+		margin-top: 5px;
+		width: 200px;
+		height:35px;
+	}
+}
+
+		.data {
+			color: #29323a;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 16px;
+			.number {
+				color: #32a0ee;
+				font-size: 25px;
+				margin:0px 15px;
+			}
+		}

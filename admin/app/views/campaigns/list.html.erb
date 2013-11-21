@@ -1,95 +1,221 @@
+<% content_for :title, "クーポン一覧" %>
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "scss/datatables" %>
+<%= stylesheet_link_tag "lib/jquery.dataTables" %>
+<% end %>
+
+
 <div id="pad-wrapper">
     <div class="table-wrapper products-table section">
-        <div class="row head">
-            <div class="col-md-12">
+        <div class="row header">
+            <div class="col-md-9">
                 <h3>クーポン一覧</h3>
             </div>
+            <div class="col-md-3 addnew">
+                <div class="pull-right">
+                    <button class="btn-flat gray"><span class="glyphicon glyphicon-plus-sign"></span> クーポン新規作成</button>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <table class="table table-hover couponlist">
-                <thead>
-                    <tr>
-                        <th class="">ステータス</th>
-                        <th class="">
-                            <span class="line"></span>
-                            開始日
-                        </th>
-                        <th class="">
-                            <span class="line"></span>
-                            終了日
-                        </th>
-                        <th class="">
-                            <span class="line"></span>
-                            タイトル
-                        </th>
-                        <th class="">
-                            <span class="line"></span>
-                            カテゴリー
-                        </th>
-                        <th>
-                            <span class="line"></span>
-                            配信数
-                        </th>
-                        <th>
-                            <span class="line"></span>
-                            CV率
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- row -->
-                    <tr class="first">
-                        <td>
-                            <span class="label label-success">配信中</span>
-                        </td>
-                        <td>2013/10/12 10:00</td>
-                        <td>2013/10/12 12:00</td>
-                        <td>ああああああああああああああああああああああああああああ</td>
-                        <td>カウントダウンクーポン</td>
-                        <td>1000</td>
-                        <td>
-                            +12.4% <i class="icon-warning-sign"></i>
-                        </td>
-                        <td>
-                             <%= link_to "クーポン詳細", campaigns_show_path ,:class => "btn-flat primary"%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="label label-success">配信中</span>
-                        </td>
-                        <td>2013/10/12 10:00</td>
-                        <td>2013/10/12 12:00</td>
-                        <td>ああああああああああああああああああああああああああああ</td>
-                        <td>カウントダウンクーポン</td>
-                        <td>1000</td>
-                        <td>
-                            +12.4% <i class="icon-warning-sign"></i>
-                        </td>
-                        <td>
-                                                         <%= link_to "クーポン詳細", campaigns_show_path ,:class => "btn-flat primary"%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="label label-success">配信中</span>
-                        </td>
-                        <td>2013/10/12 10:00</td>
-                        <td>2013/10/12 12:00</td>
-                        <td>ああああああああああああああああああああああああああああ</td>
-                        <td>カウントダウンクーポン</td>
-                        <td>1000</td>
-                        <td>
-                            +12.4%
-                            <i class="icon-ok-sign"></i>
-                        </td>
-                        <td>
-                                                         <%= link_to "クーポン詳細", campaigns_show_path ,:class => "btn-flat primary"%>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <table cellpadding="0" cellspacing="0" border="0" class="" id="example">
+                        <thead>
+                            <tr role="row">
+                                <th tabindex="0" rowspan="1" colspan="1">ステータス
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">開始日時
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">終了日時
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">クーポン名
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">配信数
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">CV率
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">操作
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <th rowspan="1" colspan="1">ステータス
+                                </th>
+                                <th rowspan="1" colspan="1">開始日時
+                                </th>
+                                <th rowspan="1" colspan="1">終了日時
+                                </th>
+                                <th rowspan="1" colspan="1">クーポン名
+                                </th>
+                                <th rowspan="1" colspan="1">配信数
+                                </th>
+                                <th rowspan="1" colspan="1">CV率
+                                </th>
+                                <th rowspan="1" colspan="1">操作
+                                </th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td><span class="label label-info">期間未設定</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその１</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-danger">配信中</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-warning">配信待ち</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-default">配信終了</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-default">配信停止</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-info">期間未設定</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその１</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-danger">配信中</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-warning">配信待ち</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-default">配信終了</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-default">配信停止</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-info">期間未設定</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその１</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-danger">配信中</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-warning">配信待ち</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-default">配信終了</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-default">配信停止</span></td>
+                                <td>2013/10/12 11:00</td>
+                                <td>2013/10/12 11:00</td>
+                                <td>ほげほげクーポンその２</td>
+                                <td class="center">1200</td>
+                                <td class="center">2000</td>
+                                <td class="center"><button type="button" class="btn btn-sm btn-default">詳細</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
+
+<% content_for :foot do %>
+    <script src="/assets/jquery.dataTables.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').dataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+    </script>
+
+    <%end%>

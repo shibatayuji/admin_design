@@ -15,13 +15,16 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="index.html">
-			<img src="/assets/logo.png"></a>
+            <%= link_to projects_dashboard_path,:class => "navbar-brand" do%>
+                <img src="/assets/logo.png">
+            <%end%>
 	</div>
 	<p class="navbar-text">クーポン名 <span>｜ カウントダウンクーポン</span></p>
 	<ul class="nav navbar-nav pull-right hidden-xs">
 		<li>
-			<a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">保存して終了</a>
+
+      <%= link_to "保存して終了" ,projects_dashboard_path,:class => "dropdown-toggle hidden-xs hidden-sm" %>
+
 
 		</li>
 	</ul>

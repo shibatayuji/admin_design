@@ -19,7 +19,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="/assets/logo.png"></a>
+            <%= link_to projects_dashboard_path,:class => "navbar-brand" do%>
+                <img src="/assets/logo.png">
+            <%end%>
         </div>
         <ul class="nav navbar-nav pull-right hidden-xs">
             <li class="dropdown">
