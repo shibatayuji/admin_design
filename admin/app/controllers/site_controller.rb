@@ -1,9 +1,14 @@
 class SiteController < ApplicationController
-	layout 'sitelevel'
+	layout 'userlevel'
 
   def list
   end
 
   def edit
   end
+
+  def tag
+			render :layout => 'registration'
+  end
+
 end

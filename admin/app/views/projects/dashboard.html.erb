@@ -1,0 +1,116 @@
+<% content_for :title, "ダッシュボード" %>
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "scss/index" %>
+<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" %>
+<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic" %>
+<% end %>
+
+<!-- upper main stats -->
+<div id="main-stats">
+	<div class="row stats-row">
+		<div class="col-md-3 col-sm-3 stat">
+			<div class="data">
+				<span class="number">2457</span>
+				visits
+			</div>
+			<span class="date">Today</span>
+		</div>
+		<div class="col-md-3 col-sm-3 stat">
+			<div class="data">
+				<span class="number">3240</span>
+				users
+			</div>
+			<span class="date">February 2013</span>
+		</div>
+		<div class="col-md-3 col-sm-3 stat">
+			<div class="data">
+				<span class="number">322</span>
+				orders
+			</div>
+			<span class="date">This week</span>
+		</div>
+		<div class="col-md-3 col-sm-3 stat last">
+			<div class="data">
+				<span class="number">$2,340</span>
+				sales
+			</div>
+			<span class="date">last 30 days</span>
+		</div>
+	</div>
+</div>
+<!-- end upper main stats -->
+
+<div id="pad-wrapper">
+	<div class="row">
+		<div class="col-md-6">
+			<h4>strapya / サイト情報サマリー</h4>
+		</div>
+		<div class="col-md-6">
+			<div class="pull-right">
+				<h5 style="text-align:right;">
+					集計期間選択
+					<input class="form-control" type="text" placeholder="2013/10/12 19:00" id="end" style="margin-left:10px;margin-bottom:0px"> <i class="icon-question-sign"></i>
+				</h5>
+			</div>
+		</div>
+	</div>
+	<div class="section table-responsive stats">
+		<table class="table table-bordered" style="table-layout:fixed">
+			<thead>
+				<tr>
+					<th>
+						訪問数 <i class="icon-question-sign"></i>
+					</th>
+					<th>CV率</th>
+					<th>
+						平均CV率
+						<i class="icon-question-sign"></i>
+					</th>
+					<th>
+						平均滞在時間
+						<i class="icon-question-sign"></i>
+					</th>
+					<th>訪問別PV</th>
+					<th>訪問別興味商品数</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1000</td>
+					<td>12:00:00</td>
+					<td>12.2</td>
+					<td>2.5%</td>
+					<td>2500</td>
+					<td>12:00:00</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	<div class="section maingraph">
+
+
+	</div>
+
+	<div class="section userstats">
+			<h4>strapya / ユーザー情報</h4>
+	<div class="row">
+		<div class="col-md-4">
+asd
+		</div>
+		<div class="col-md-4">
+asda
+		</div>
+		<div class="col-md-4">
+asda
+		</div>
+
+	</div>
+
+
+</div>
+
+<% content_for :foot do %>
+<script src="/assets/highcharts.js"></script>
+<% end %>

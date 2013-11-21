@@ -66,16 +66,12 @@
 	}
 	.actions {
 		margin-top: 30px;
-		text-align: right;
+		text-align: left;
 		padding-right: 40px;
-
 		span {
-			text-transform: uppercase;
 			color: #7e91aa;
-			font-weight: 600;
 			display: inline-block;
-			vertical-align: middle;
-			margin: 0 2px 0 8px;
+			margin: 0 5px 0 8px;
 		}
 		input.reset {
 			color: #7e91aa;
@@ -154,7 +150,7 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
 
 }
 

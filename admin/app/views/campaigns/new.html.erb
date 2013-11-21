@@ -1,0 +1,346 @@
+<% content_for :title, "キャンペーン作成" %>
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "scss/form-wizard" %>
+<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" %>
+<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic" %>
+<% end %>
+
+<!-- navbar -->
+<header class="navbar navbar-fixed-top navbar-inverse" role="banner">
+	<div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-toggle="collapse" id="menu-toggler">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="index.html">
+			<img src="/assets/logo.png"></a>
+	</div>
+	<p class="navbar-text">クーポン名 <span>｜ カウントダウンクーポン</span></p>
+	<ul class="nav navbar-nav pull-right hidden-xs">
+		<li>
+			<a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">保存して終了</a>
+
+		</li>
+	</ul>
+</header>
+<!-- end navbar -->
+<div class="campaignnew content">
+	<div class="step-content">
+		<div class="step-pane active" id="step1">
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<h3>配信セットアップ</h3>
+
+					<div class="section">
+						<h4>クーポン名設定</h4>
+						<div class="form-group">
+							<div>
+								<input class="form-control" type="text" placeholder="クーポンのIDになります。ユニークな物を設定して下さい。"/>
+								<span>20文字以内</span>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="section">
+						<h4>配信テンプレートを選択</h4>
+
+						<div class="templatecontainer selected">
+							<dl>
+								<dt>
+									<span class="label label-success">PC向け</span>
+									カウントダウンクーポン
+								</dt>
+								<dd>
+									<img src="/assets/gallery3.jpg"></dd>
+							</dl>
+						</div>
+
+						<div class="templatecontainer">
+							<dl>
+								<dt>
+									<span class="label label-success">PC向け</span>
+									カウントダウンクーポン
+								</dt>
+								<dd>
+									<img src="/assets/gallery1.jpg"></dd>
+							</dl>
+						</div>
+
+						<div class="templatecontainer">
+							<dl>
+								<dt>
+									<span class="label label-success">PC向け</span>
+									カウントダウンクーポン
+								</dt>
+								<dd>
+									<img src="/assets/gallery2.jpg"></dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="step-pane" id="step2">
+			<div class="creativebox">
+				<div class="col-md-9 creativeimage">
+					<div style="border-right:solid 1px #DDDDDD; height:650px;"></div>
+				</div>
+				<div class="col-md-3 creativecontets">
+					<div class="creativeselector">
+						<div class="btn-group">
+							<button data-toggle="dropdown" class="btn btn-info dropdown-toggle" type="button">
+								クリエイティブ設定１
+								<span class="caret"></span>
+							</button>
+							<ul role="menu" class="dropdown-menu">
+								<li>
+									<a href="#">クリエイティブ設定２</a>
+								</li>
+								<li>
+									<a href="#">クリエイティブ設定３</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">クリエイティブを追加</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="creativeset">
+
+						<form role="form">
+							<div class="form-group">
+								<label>上部テキスト</label>
+								<input class="form-control" type="text">
+								<span>※20文字以内</span>
+							</div>
+							<div class="form-group">
+								<label>ロゴ</label>
+								<input class="form-control" type="text">
+								<button class="btn-flat">画像選択</button>
+							</div>
+							<div class="form-group">
+								<label>クーポン有効期限</label>
+								<select class="form-control select2">
+									<option></option>
+									<option value="AK">5分</option>
+									<option value="HI">15分</option>
+									<option value="CA">30分</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="label-control">表示位置</label>
+								<label class="radio">
+									<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>左下</label>
+								<label class="radio">
+									<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">右下</label>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="step-pane" id="step3">
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<h3>配信条件設定</h3>
+
+					<div class="section">
+						<h4>配信対象を選択</h4>
+						<div class="form-group">
+							<select class="form-control select2">
+								<option></option>
+								<option value="AK">選択状態 - ほげほげほげほげほげほげな状態です</option>
+								<option value="HI">選択状態 - ほげほげほげほげほげほげな状態です</option>
+								<option value="CA">選択状態 - ほげほげほげほげほげほげな状態です</option>
+							</select>
+						</div>
+					</div>
+					<div class="section schedule">
+						<h4>配信スケジュールを設定</h4>
+
+					<div class="form-group">
+						<label>配信開始日時</label>
+						<div class="date">
+							<input class="form-control" type="text"/>
+						</div>
+						<div class="time">
+							<input class="form-control" type="text"/>
+						</div>
+						<div class="time">
+							<input class="form-control" type="text"/>
+						</div>
+						<div class="time">
+							<input class="form-control" type="text"/>
+						</div>
+
+					</div>
+					<div class="form-group">
+						<label>配信終了日時</label>
+						<div class="date">
+							<input class="form-control" type="text"/>
+						</div>
+						<div class="time">
+							<select id="schedule-meridiem"name="schedule-meridiem" style="width:auto"> <option value="AM">AM</option> <option value="PM" selected="selected">PM</option> </select>
+						</div>
+						<div class="time">
+							<select id="schedule-meridiem"name="schedule-meridiem" style="width:auto"> <option value="AM">AM</option> <option value="PM" selected="selected">PM</option> </select>
+						</div>
+						<div class="time">
+							<select id="schedule-meridiem"name="schedule-meridiem" style="width:auto"> <option value="AM">AM</option> <option value="PM" selected="selected">PM</option> </select>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="step-pane" id="step4">
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<h3>設定内容確認</h3>
+					<div class="section">
+						<h4>配信設定</h4>
+						<div class="setting">
+							<div class="row">
+								<div class="col-md-12" style="margin-bottom:20px;">
+									<h5>
+										配信条件
+										<i class="icon-question-sign"></i>
+									</h5>
+									<input class="form-control" type="text" placeholder="興味商品数２以上" id="end"></div>
+								<div class="col-md-6">
+									<h5>
+										配信開始日時 <i class="icon-question-sign"></i>
+									</h5>
+									<input class="form-control" type="text" placeholder="2013/10/12 19:00" id="end"></div>
+								<div class="col-md-6">
+									<h5>
+										配信終了日時 <i class="icon-question-sign"></i>
+									</h5>
+									<input class="form-control" type="text" placeholder="2013/10/12 19:00" id="end"></div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="section">
+						<h4>クリエイティブ設定一覧</h4>
+						<table class="table table-hover table-bordered" style="background-color:#FFFFFF; margin-bottom:0px;">
+							<thead>
+								<tr>
+									<th>
+										設定ID
+										<i class="icon-question-sign"></i>
+									</th>
+									<th>タイトル</th>
+									<th>テキスト</th>
+									<th>ロゴ</th>
+									<th>パターン</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>設定A</th>
+									<td>タイトル</td>
+									<td>テキスト</td>
+									<td>ロゴ</td>
+									<td>パターン</td>
+								</tr>
+								<tr>
+									<th>設定B</th>
+									<td>タイトル</td>
+									<td>テキスト</td>
+									<td>ロゴ</td>
+									<td>パターン</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="wizard-actions">
+			<button type="button" disabled class="btn-flat gray btn-prev pull-left">
+				<i class="icon-chevron-left"></i>
+				戻る
+			</button>
+
+			<div id="fuelux-wizard" class="wizard">
+				<ul class="wizard-steps">
+					<li data-target="#step1" class="active">
+						<span class="btn-flat white title">セットアップ</span>
+					</li>
+					<li data-target="#step2">
+
+						<span class="btn-flat white title">デザイン</span>
+					</li>
+					<li data-target="#step3">
+
+						<span class="btn-flat white title">条件設定</span>
+					</li>
+					<li data-target="#step4">
+
+						<span class="btn-flat white title">設定確認</span>
+					</li>
+
+				</ul>
+			</div>
+
+			<button type="button" class="btn-flat gray btn-next pull-right" data-last="Finish">
+				次のステップへ
+				<i class="icon-chevron-right"></i>
+			</button>
+			<button type="button" class="btn-flat primary btn-finish pull-right">設定完了<i class="icon-ok"></i></button>
+		</div>
+
+		<% content_for :foot do %>
+
+		<script src="/assets/fuelux.wizard.js"></script>
+
+		<script type="text/javascript">
+        $(function () {
+            var $wizard = $('#fuelux-wizard'),
+                $btnPrev = $('.wizard-actions .btn-prev'),
+                $btnNext = $('.wizard-actions .btn-next'),
+                $btnFinish = $(".wizard-actions .btn-finish");
+
+            $wizard.wizard().on('finished', function(e) {
+                // wizard complete code
+            }).on("changed", function(e) {
+                var step = $wizard.wizard("selectedItem");
+                // reset states
+                $btnNext.removeAttr("disabled");
+                $btnPrev.removeAttr("disabled");
+                $btnNext.show();
+                $btnFinish.hide();
+
+                if (step.step === 1) {
+                    $btnPrev.attr("disabled", "disabled");
+                } else if (step.step === 4) {
+                    $btnNext.hide();
+                    $btnFinish.show();
+                }
+            });
+
+            $btnPrev.on('click', function() {
+                $wizard.wizard('previous');
+            });
+            $btnNext.on('click', function() {
+                $wizard.wizard('next');
+            });
+        });
+    </script>
+
+		<% end %>

@@ -5,7 +5,6 @@
   <title><%= yield :title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag "application" %>
-	<%= stylesheet_link_tag "scss/skins/dark" %>
   <%= javascript_include_tag "application" %>
   <%= yield :head %>
 </head>
@@ -23,22 +22,37 @@
             <a class="navbar-brand" href="index.html"><img src="/assets/logo.png"></a>
         </div>
         <ul class="nav navbar-nav pull-right hidden-xs">
-
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
                     ho.mu.zu@gmail.com
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Billing</a></li>
-                    <li><a href="#">Export your data</a></li>
-                    <li><a href="#">Send feedback</a></li>
+                    <li><%= link_to "ユーザー情報変更", site_edit_path%></li>
+                    <li><%= link_to "ログアウト", users_login_path%></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
+                    サイトネーム
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+											<%= link_to projects_edit_path do %>
+                    	サイト情報変更<% end %></li>
+                    <li>
+											<%= link_to projects_tag_path do %>
+                    	タグ確認<% end %></li>
+                    <li>
+											<%= link_to site_list_path do %>
+                    	サイト一覧へ戻る<% end %></li>
                 </ul>
             </li>
             <li class="settings hidden-xs hidden-sm">
-                <a href="signin.html" role="button">
+	            	<%= link_to site_list_path,"data-role" => "button"  do %>
                     <i class="icon-share-alt"></i>
-                </a>
+                <% end %>
             </li>
         </ul>
     </header>
@@ -46,22 +60,49 @@
 
     <div id="sidebar-nav">
         <ul id="dashboard-menu">
-
             <li class="active">
-                <a href="site.html">
-                    <div class="pointer">
-                        <div class="arrow"></div>
-                        <div class="arrow_border"></div>
-                    </div>
-                    <i class="icon-home"></i>
-                    <span>サイト一覧</span>
-                </a>
+            	<%= link_to projects_dashboard_path do %>
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                    <i class="icon-dashboard"></i>
+                    <span>ダッシュボード</span>
+                <%end%>
             </li>
             <li>
-                <a href="user.html">
-                    <i class="icon-user"></i>
-                    <span>ユーザー情報変更</span>
+            	<%= link_to campaigns_list_path do %>
+                    <i class="icon-calendar"></i>
+                    <span>クーポン一覧</span>
+                <% end %>
+            </li>
+            <li>
+            	<%= link_to campaigns_new_path do %>
+                    <i class="icon-pencil"></i>
+                    <span>クーポン作成</span>
+                <% end %>
+            </li>
+            <li>
+            	<%= link_to image_list_path do %>
+                    <i class="icon-picture"></i>
+                    <span>画像管理</span>
+                <% end %>
+            </li>
+
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-cog"></i>
+                    <span>サイト情報</span>
+                    <i class="icon-chevron-down"></i>
                 </a>
+                <ul class="submenu">
+                    <li>
+											<%= link_to projects_edit_path do %>
+                    	サイト情報変更<% end %></li>
+                    <li>
+											<%= link_to projects_tag_path do %>
+                    	タグ確認<% end %></li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -69,5 +110,6 @@
     <div class="content">
   		<%= yield %>
 		</div>
+		<%= yield :foot %>
 </body>
 </html>

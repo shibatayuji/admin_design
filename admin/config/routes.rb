@@ -1,10 +1,14 @@
 Admin::Application.routes.draw do
+  get "projects/tag"
+  get "projects/edit"
+  get "campaigns/list"
+  get "campaigns/new"
+  get "campaigns/show"
+  get "projects/dashboard"
   get "image/list"
   get "site/tag"
   get "site/list"
   get "site/edit"
-  get "projects/list"
-  get "projects/show"
   get "projects/new"
   get "users/login"
   get "users/signup"
@@ -50,7 +54,7 @@ Admin::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

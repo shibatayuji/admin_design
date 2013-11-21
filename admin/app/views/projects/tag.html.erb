@@ -1,0 +1,21 @@
+<% content_for :title, "タグ確認" %>
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "scss/new-user" %>
+<% end %>
+<div id="pad-wrapper" class="new-user">
+
+	<div class="row header">
+		<div class="col-md-12">
+			<h3>タグ確認</h3>
+		</div>
+	</div>
+
+	<div class="row form-wrapper">
+		<!-- left column -->
+		<div class="col-md-10 with-sidebar">
+			<%=render :partial =>'/share/tag'%>
+		</div>
+
+	</div>
+</div>

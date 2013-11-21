@@ -1,2 +1,26 @@
-<h1>Site#tag</h1>
-<p>Find me in app/views/site/tag.html.erb</p>
+<% content_for :title, "ユーザー登録" %>
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "scss/signup" %>
+<% end %>
+
+<div class="login-wrapper">
+    <div class="box">
+        <div class="content-wrap">
+                            <h6>
+                    「計測タグ」と「コンバージョンタグ」を発行しました
+                    <br/>
+                    下記の案内に従ってサイト内にタグをご設置下さい
+                </h6>
+                <div style="text-align:left">
+                    <%=render :partial =>'/share/tag'%>
+                </div>
+
+                    <div class="action">
+                        <a class="btn-glow primary signup" href="signin.html">サイト一覧へ移動</a>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+</div>

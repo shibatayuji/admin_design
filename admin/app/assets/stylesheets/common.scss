@@ -1,16 +1,323 @@
 @import "font-awesome";
 
-.login-wrapper .form-holizontal .form-group{
+.form-holizontal .form-group{
 	min-height: 50px;
 	text-align: left;
 	label{
-		line-height: 40px;
-		text-align: right;
+		line-height: 35px;
+		text-align: left;
 		font-size: 14px;
 	}
 	span{
 		display: block;
 		float: left;
 		margin-bottom: 15px;
+		color:#999999;
 	}
+}
+
+.login-wrapper .form-holizontal .form-group label{
+		text-align: right;
+}
+
+.passchange{
+  font-weight: 500;
+}
+
+.setting {
+background-color:rgb(253,253,253);
+border-color:rgb(232,233,238);
+border-width:1px;
+border-radius:1px;
+border-style:solid;
+padding: 15px;
+margin-bottom: 30px;
+border-radius: 3px;
+	h5{
+		margin-bottom:10px;
+	}
+}
+
+.icon-question-sign{
+	margin-left: 5px;
+	font-size: 15px;
+}
+
+.section{
+	margin-bottom: 40px;
+	h5{
+		margin-bottom: 10px;
+	}
+}
+
+
+/* original */
+
+#step1{
+	.form-group{
+		label{
+			margin-bottom: 20px;
+		}
+		span{
+			font-size: 15px;
+			padding-left: 10px;
+			color:#999999;
+		}
+		.form-control{
+			margin-bottom: 10px;
+			height: 45px;
+			font-size: 20px;
+		}
+	}
+
+	.templatecontainer{
+		font-size: 15px;
+		float: left;
+		height: 200px;
+		margin-right: 30px;
+		cursor: pointer;
+		img{
+		  width:300px;
+		  height: 180px;
+		  margin: 0px;
+		  border: solid 1px #DDDDDD;
+		  padding: 13px;
+		  border-radius: 3px;
+		}
+		span{
+			margin-right: 5px;
+		}
+		dt{
+	  margin-bottom: 15px;
+		}
+		dd{
+
+		}
+	}
+
+	.selected{
+		span{
+		}
+		img{
+			border:solid 1px #BCE8F1;
+			background: #D9EDF7;
+		}
+		dt{
+			color:#3A87AD;
+		}
+	}
+
+}
+
+#step2{
+	.form-group{
+		label{
+			margin-bottom: 5px;
+		}
+		span{
+		  display: block;
+		  color: rgb(153, 153, 153);
+			padding-left: 10px;
+		}
+		.form-control{
+			margin-bottom: 5px;
+			height: 35px;
+			font-size: 15px;
+		}
+	}
+
+}
+
+.creativebox{
+	padding: 0px;
+	margin:0px;
+
+	.creativeselector{
+		padding: 15px;
+		border-bottom: solid 1px #dddddd;
+	}
+	.creativeset{
+		padding-top:15px;
+	}
+}
+
+
+.creativeimage{
+	padding: 0px;
+}
+
+.creativecontets{
+	padding: 0px;
+}
+
+
+.creativeselector{
+}
+.creativeset{
+  padding: 0px 15px;
+}
+
+
+
+.creativeselector .pagination li a{
+    line-height: 30px;
+}
+
+.creativeselector .pagination ul > li:last-child > a,.creativeselector .pagination ul > li:first-child > a{
+    font-size: 12px;
+    padding: 2px 20px;
+}
+
+.form-wrapper .field-box label{
+  width: 100%;
+}
+
+.step-content label{
+
+}
+
+.navbar-fixed-top{
+	background-color: #333333;
+}
+
+.campaignnew{
+	margin:0px;
+	padding: 0px;
+	height: 100%;
+}
+
+.wizard-actions{
+	z-index: 999;
+	padding: 10px;
+	position: fixed;
+	background: #FFFFFF;
+	top:48px;
+	width: 100%;
+	height: 55px;
+	border-bottom:1px solid #DDDDDD;
+}
+
+.wizard{
+  left: 50%;
+  margin-left: -175px;
+  position: absolute;
+  width: 350px;
+}
+
+.wizard-steps{
+	text-align: center;
+}
+
+#step1{
+margin:20px 20px;
+}
+#step2{
+}
+#step3{
+	margin:20px 20px;
+	.form-group{
+		label{
+			margin-bottom: 20px;
+			display: block;
+		}
+		span{
+			font-size: 15px;
+			padding-left: 10px;
+			color:#999999;
+		}
+		.form-control{
+			margin-bottom: 10px;
+			height: 45px;
+			font-size: 20px;
+		}
+	}
+	.schedule{
+		label{
+			margin-bottom: 5px;
+			font-size: 15px;
+		}
+		.form-group{
+			display: inline-block;
+			margin-right: 30px;
+		}
+		.date{
+			width: 220px;
+			display: inline-block;
+			margin-right: 15px;
+		}
+		.time{
+			width: 60px;
+			display: inline-block;
+			.form-control{
+				background: #ddd;
+			}
+			select{
+		    background-image: none;
+		    padding: 10px 8px 8px;
+		    font-size: 13px;
+		    height: 36px;
+				-moz-appearance: button;
+				-webkit-appearance: button;
+				appearance: button;
+		    position: relative;
+		    border: none;
+		    font-weight: 700;
+		    letter-spacing: .01em;
+		    color: #737373;
+		    background-color: #e0e0e0;
+		    border-collapse: separate;
+		    background-repeat: no-repeat;
+		    background-position: right center;
+		    cursor: pointer;
+		    border-radius: 3px;
+		    width: 100%;
+		    max-width: 550px
+			}
+		}
+	}
+}
+#step4{
+	margin:20px 20px;
+}
+
+
+
+
+.step-content{
+
+	.section{
+		margin-bottom: 40px;
+	}
+	h3{
+		margin-bottom: 30px;
+		color:#999999;
+	}
+	h4{
+		margin-bottom: 15px;
+	}
+}
+
+.navbar-text{
+	color: #FFF !important;
+
+	letter-spacing: 0.01em;
+	font-size: 13px;
+}
+
+
+.stats{
+
+	th{
+		text-align: center;
+	}
+	td{
+		text-align: center;
+		font-size: 17px;
+		color:#32A0EE;
+	}
+}
+
+.maingraph{
+	height: 350px;
+	background: #ddd;
 }
