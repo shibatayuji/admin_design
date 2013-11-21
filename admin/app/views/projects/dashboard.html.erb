@@ -9,39 +9,25 @@
 <!-- upper main stats -->
 <div id="main-stats">
 	<div class="row stats-row">
-		<div class="col-md-3 col-sm-3 stat">
+		<div class="col-md-6 col-sm-6 stat">
 			<div class="data">
-				<span class="number">2457</span>
-				visits
+				<span class="number">12,000</span>
+				配信
 			</div>
-			<span class="date">Today</span>
+			<span class="date">当月のキャンペーン配信数</span>
 		</div>
-		<div class="col-md-3 col-sm-3 stat">
+		<div class="col-md-6 col-sm-6 stat last">
 			<div class="data">
-				<span class="number">3240</span>
-				users
+				<span class="number">+12.3</span>
+				%
 			</div>
-			<span class="date">February 2013</span>
-		</div>
-		<div class="col-md-3 col-sm-3 stat">
-			<div class="data">
-				<span class="number">322</span>
-				orders
-			</div>
-			<span class="date">This week</span>
-		</div>
-		<div class="col-md-3 col-sm-3 stat last">
-			<div class="data">
-				<span class="number">$2,340</span>
-				sales
-			</div>
-			<span class="date">last 30 days</span>
+			<span class="date">当月のコンバージョン率の変化</span>
 		</div>
 	</div>
 </div>
 <!-- end upper main stats -->
 
-<div id="pad-wrapper">
+<div id="pad-wrapper" class="analytics">
 	<div class="row">
 		<div class="col-md-6">
 			<h4>strapya / サイト情報サマリー</h4>
@@ -88,29 +74,160 @@
 		</table>
 
 	</div>
-	<div class="section maingraph">
-
-
-	</div>
+	<div class="section maingraph"></div>
 
 	<div class="section userstats">
-			<h4>strapya / ユーザー情報</h4>
-	<div class="row">
-		<div class="col-md-4">
-asd
+		<h4>strapya / ユーザー情報</h4>
+		<div class="row">
+			<div class="col-md-4"><div id="graphbox1"></div></div>
+			<div class="col-md-4"><div id="graphbox2"></div></div>
+			<div class="col-md-4"><div id="graphbox3"></div></div>
 		</div>
-		<div class="col-md-4">
-asda
-		</div>
-		<div class="col-md-4">
-asda
-		</div>
+	</div>
 
+	<div class="section items">
+		<h4>strapya / 商品ランキング</h4>
+		<div class="row">
+			<div class="col-md-4">
+				<table class="table table-bordered table-hover">
+					<caption>閲覧ランキング(PV)</caption>
+					<tbody>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-4">
+				<table class="table table-bordered table-hover">
+					<caption>CVランキング(CV数)</caption>
+					<tbody>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-4">
+				<table class="table table-bordered table-hover">
+					<caption>興味ランキング(interest)</caption>
+					<tbody>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+						<tr>
+							<th>2000</th>
+							<td>datadatadatadata</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
 
 
-</div>
+	<% content_for :foot do %>
+	<script src="/assets/highcharts.js"></script>
+	<script src="/assets/skies.js"></script>
+	<script type="text/javascript">
+		var chart;
+		function draw(box) {
+			options = {
+				chart: {
+					renderTo: box,
+					plotBackgroundColor: null,
+					plotBorderWidth: 0,
+					plotShadow: false
+				},
+				title: {
+					text: 'Browser<br>shares',
+					align: 'center',
+					verticalAlign: 'middle'
+				},
+				tooltip: {
+					pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				},
+				plotOptions: {
+					pie: {
+						dataLabels: {
+							enabled: true,
+							distance: -50,
+							style: {
+								fontWeight: 'bold',
+								color: 'white',
+								textShadow: '0px 1px 2px black'
+							}
+						},
+						startAngle: -90,
+						endAngle: 90,
+						center: ['50%', '75%']
+					}
+				},
+				series: [{
+					type: 'pie',
+					name: 'Browser share',
+					innerSize: '50%',
+					data: [
+						['Firefox', 45.0],
+						['IE', 26.8],
+						['Chrome', 12.8]
+					]
+				}]
+			}
+			chart = new Highcharts.Chart(options);
+		}
 
-<% content_for :foot do %>
-<script src="/assets/highcharts.js"></script>
-<% end %>
+		// ページがロードされた後に、グラフを出力する
+		document.body.onload = draw("graphbox1");
+		document.body.onload = draw("graphbox2");
+		document.body.onload = draw("graphbox3");
+	</script>
+
+	<% end %>

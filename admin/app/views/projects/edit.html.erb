@@ -16,24 +16,281 @@
 		<div class="col-md-9 with-sidebar">
 			<div class="container">
 				<form class="form-holizontal new_user_form">
-					<div class="form-group">
-						<label class="col-md-4 control-label" >サイト名</label>
-						<div class="col-md-8">
-							<input class="form-control" type="text"></div>
+					<div class="section">
+						<div class="form-group">
+							<label class="col-md-4 control-label" >サイト名</label>
+							<div class="col-md-8">
+								<input class="form-control" type="text"></div>
 						</div>
-					<div class="form-group">
-						<label class="col-md-4 control-label" >サイトURL</label>
-						<div class="col-md-8">
-							<input class="form-control" type="text">
+						<div class="form-group">
+							<label class="col-md-4 control-label" >サイトURL</label>
+							<div class="col-md-8">
+								<input class="form-control" type="text"></div>
 						</div>
 					</div>
+					<!-- acordion start -->
+					<div class="section">
+						<h5>詳細設定項目</h5>
+						<div class="acordion_container">
+							<div id="type" class="acordion_title">
+								ページの種類
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div class="acordion">
+								<div class="section">
+									<div class="form-group">
+										<label class="col-md-4 control-label" >種類</label>
+										<div class="col-md-4">
+											<select class="form-control">
+												<option selected="">商品ページ</option>
+												<option>Custom selects</option>
+												<option>Pure css styles</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label" >URL</label>
+										<div class="col-md-3">
+											<select class="form-control">
+												<option selected="">前方一致</option>
+												<option>Custom selects</option>
+												<option>Pure css styles</option>
+											</select>
+										</div>
+										<div class="col-md-5">
+											<input class="form-control" type="url"></div>
+									</div>
+									<div class="form-group">
+										<button class="btn-flat gray">データを追加</button>
+									</div>
+								</div>
+								<div class="section">
+									<table class="table table-bordered table-hover">
+										<tbody>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+										</tbody>
+									</table>
 
-					<div class="field-box actions">
-						<input type="button" class="btn-glow primary" value="設定を変更">
+								</div>
+							</div>
+						</div>
+						<!-- acordion end -->
+
+						<!-- acordion start -->
+						<div class="acordion_container">
+							<div id="type" class="acordion_title">
+								カートボタン
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+
+							<div class="acordion">
+								<div class="section">
+									<div class="form-group">
+										<label class="col-md-4 control-label" >URL</label>
+										<div class="col-md-3">
+											<select class="form-control">
+												<option selected="">前方一致</option>
+												<option>Custom selects</option>
+												<option>Pure css styles</option>
+											</select>
+										</div>
+										<div class="col-md-5">
+											<input class="form-control" type="url"></div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label" >セレクタ</label>
+										<div class="col-md-8">
+											<input class="form-control" type="url"></div>
+									</div>
+									<div class="form-group">
+										<button class="btn-flat gray">データを追加</button>
+									</div>
+								</div>
+								<div class="section">
+									<table class="table table-bordered table-hover">
+										<tbody>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!-- acordion end -->
+
+						<!-- acordion start -->
+						<div class="acordion_container">
+							<div id="type" class="acordion_title">
+								IPアドレス・フィルター
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+
+							<div class="acordion">
+								<div class="section">
+									<div class="form-group">
+										<label class="col-md-4 control-label" >IPアドレス</label>
+										<div class="col-md-3">
+											<select class="form-control">
+												<option selected="">完全一致</option>
+												<option>Custom selects</option>
+												<option>Pure css styles</option>
+											</select>
+										</div>
+										<div class="col-md-5">
+											<input class="form-control" type="url"></div>
+									</div>
+									<div class="form-group">
+										<button class="btn-flat gray">データを追加</button>
+									</div>
+								</div>
+								<div class="section">
+									<table class="table table-bordered table-hover">
+										<tbody>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!-- acordion end -->
+
+						<!-- acordion start -->
+						<div class="acordion_container">
+							<div id="type" class="acordion_title">
+								除外URLパラメータ
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div class="acordion">
+								<div class="section">
+									<div class="form-group">
+										<label class="col-md-4 control-label" >パラメータ</label>
+										<div class="col-md-8">
+											<input class="form-control" type="url"></div>
+									</div>
+									<div class="form-group">
+										<button class="btn-flat gray">データを追加</button>
+									</div>
+								</div>
+								<div class="section">
+									<table class="table table-bordered table-hover">
+										<tbody>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!-- acordion end -->
+
+						<!-- acordion start -->
+						<div class="acordion_container aclast">
+							<div id="type" class="acordion_title">
+								クッキー
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+
+							<div class="acordion">
+								<div class="section">
+									<div class="form-group">
+										<label class="col-md-4 control-label" >ドメイン</label>
+										<div class="col-md-8">
+											<input class="form-control" type="url" placeholder=".">
+											<span>サブドメインの場合は、複数指定する必要はございません。</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<button class="btn-flat gray">データを追加</button>
+									</div>
+								</div>
+								<div class="section">
+									<table class="table table-bordered table-hover">
+										<tbody>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+											<tr>
+												<td>data</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<!-- acordion end -->
+						<div class="field-box actions">
+							<input type="button" class="btn-glow primary" value="設定を変更">
+						</div>
 					</div>
 				</form>
 			</div>
 		</div>
-
 	</div>
 </div>
+
+<% content_for :foot do %>
+<script type="text/javascript">
+		var acappear = function(box){
+				$(box).click(function(){
+					$(this).parent().children(".acordion").slideDown("fast");
+					$(this).unbind('click');
+					$(this).addClass('selected');
+					acremove($(this));
+				});
+		}
+		var acremove = function(box){
+				$(box).click(function(){
+					$(this).parent().children(".acordion").slideUp("fast");
+					$(this).unbind('click');
+					$(this).removeClass('selected');
+					acappear($(this));
+				});
+		}
+		acappear(".acordion_title");
+
+$(".acordion_title").hover(function(){
+	$(this).addClass('active');
+},function(){
+	$(this).removeClass('active');
+});
+
+	</script>
+
+<% end %>

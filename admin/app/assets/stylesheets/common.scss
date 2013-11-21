@@ -305,19 +305,99 @@ margin:20px 20px;
 }
 
 
-.stats{
 
-	th{
-		text-align: center;
+
+
+.analytics{
+	h4{
+		margin-bottom: 20px;
 	}
-	td{
-		text-align: center;
-		font-size: 17px;
-		color:#32A0EE;
+
+	.stats{
+		th{
+			text-align: center;
+			font-size: 14px;
+			padding-bottom: 5px;
+		}
+		td{
+			text-align: center;
+			font-size: 17px;
+			color:#32A0EE;
+		}
+	}
+
+	.maingraph{
+		height: 350px;
+		background: #ddd;
+	}
+	#graphbox1{
+		height: 200px;
+	}
+	#graphbox2{
+		height: 200px;
+	}
+	#graphbox3{
+		height: 200px;
+	}
+	.items{
+		caption{
+			text-align: left;
+			margin-bottom: 10px;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		th{
+			color:#32A0EE;
+			font-weight: normal;
+			width: 60px;
+			text-align: center;
+		}
+		td{
+			overflow: hidden;
+		}
 	}
 }
 
-.maingraph{
-	height: 350px;
-	background: #ddd;
+.new-user{
+	.acordion_title{
+    font-size: 13px;
+    font-weight: 600;
+		border-top: solid 1px #DDD;
+		padding: 15px 7px 15px 15px;
+		color: #33455A;
+		cursor: pointer;
+		.label{
+			font-size: 11px;
+			margin-right: 5px;
+		}
+		.glyphicon{
+			padding-top: 4px;
+		}
+	}
+	.active{
+		background: #D9EDF7;
+	}
+	.selected{
+		background: #D9EDF7;
+		color:#3A87AD;
+	}
+	.acordion{
+		border-top: solid 1px #DDD;
+		padding-top: 25px;
+		display: none;
+		button{
+			margin-left:135px;
+		}
+	}
+
+	.aclast{
+		border-bottom: solid 1px #DDD;
+	}
 }
+
+.tagsetting{
+	h4{
+		margin-bottom:15px;
+	}
+}
+
