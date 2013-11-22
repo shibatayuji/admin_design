@@ -36,11 +36,6 @@
                     <li><%= link_to "ログアウト", users_login_path%></li>
                 </ul>
             </li>
-            <li class="settings hidden-xs hidden-sm">
-	            	<%= link_to users_login_path,"data-role" => "button"  do %>
-                    <i class="icon-share-alt"></i>
-                <% end %>
-            </li>
         </ul>
     </header>
     <!-- end navbar -->
@@ -54,13 +49,13 @@
 							                        <div class="arrow"></div>
 							                        <div class="arrow_border"></div>
 							                    </div>
-							                    <i class="icon-home"></i>
+							                    <i class="glyphicon glyphicon-home"></i>
 							                    <span>サイト一覧</span>
 							<% end %>
             </li>
             <li>
 							<%= link_to site_edit_path do %>
-                    <i class="icon-user"></i>
+                    <i class="glyphicon glyphicon-user"></i>
                     <span>ユーザー設定</span>
                 <%end%>
             </li>

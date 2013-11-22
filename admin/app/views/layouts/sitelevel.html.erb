@@ -34,6 +34,8 @@
                     <li><%= link_to "ログアウト", users_login_path%></li>
                 </ul>
             </li>
+        </ul>
+        <ul class="nav navbar-nav pull-right hidden-xs">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
                     サイトネーム
@@ -51,11 +53,6 @@
                     	サイト一覧へ戻る<% end %></li>
                 </ul>
             </li>
-            <li class="settings hidden-xs hidden-sm">
-	            	<%= link_to site_list_path,"data-role" => "button"  do %>
-                    <i class="icon-share-alt"></i>
-                <% end %>
-            </li>
         </ul>
     </header>
     <!-- end navbar -->
@@ -68,32 +65,32 @@
                     <div class="arrow"></div>
                     <div class="arrow_border"></div>
                 </div>
-                    <i class="icon-dashboard"></i>
+                    <i class="glyphicon glyphicon-dashboard"></i>
                     <span>ダッシュボード</span>
                 <%end%>
             </li>
             <li>
             	<%= link_to campaigns_list_path do %>
-                    <i class="icon-calendar"></i>
+                    <i class="glyphicon glyphicon-list"></i>
                     <span>クーポン一覧</span>
                 <% end %>
             </li>
             <li>
             	<%= link_to campaigns_new_path do %>
-                    <i class="icon-pencil"></i>
+                    <i class="glyphicon glyphicon-pencil"></i>
                     <span>クーポン作成</span>
                 <% end %>
             </li>
             <li>
             	<%= link_to image_list_path do %>
-                    <i class="icon-picture"></i>
+                    <i class="glyphicon glyphicon-picture"></i>
                     <span>画像管理</span>
                 <% end %>
             </li>
 
             <li>
                 <a class="dropdown-toggle" href="#">
-                    <i class="icon-cog"></i>
+                    <i class="glyphicon glyphicon-cog"></i>
                     <span>サイト情報</span>
                     <i class="icon-chevron-down"></i>
                 </a>

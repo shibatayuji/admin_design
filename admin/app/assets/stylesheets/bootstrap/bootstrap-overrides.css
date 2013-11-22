@@ -321,11 +321,11 @@ table tr.first td{
 	border-top: 0 none;
 }
 table th span.line{
-	position: absolute;
-	top: 0;
-	left: -8px;
-	border-left: 1px solid #dee3ea;
-	height: 10px;
+    border-left: 1px solid #DEE3EA;
+    height: 10px;
+    left: -8px;
+    position: relative;
+    top: -5px;
 }
 
 /* modals */

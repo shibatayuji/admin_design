@@ -305,32 +305,33 @@ margin:20px 20px;
 }
 
 .datepick{
-span{
-	font-size: 15px;
-	margin-right: 5px;
+	span{
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.form-control{
+		display: inline-block;
+		width: 180px;
+	}
 }
-.form-control{
-	display: inline-block;
-	width: 180px;
-}
-
 
 .analytics{
 	h4{
 		margin-bottom: 20px;
 	}
-	}
 
 	.stats{
-		th{
-			text-align: center;
-			font-size: 14px;
-			padding-bottom: 5px;
-		}
-		td{
+		.panel-body{
 			text-align: center;
 			font-size: 17px;
+			font-weight: bold;
 			color:#32A0EE;
+		}
+		.panel-footer{
+			text-align: center;
+			font-size: 12px;
+			padding-bottom: 5px;
+			color: #6E829B;
 		}
 	}
 
@@ -394,7 +395,7 @@ span{
 		padding-top: 25px;
 		display: none;
 		button{
-			margin-left:135px;
+
 		}
 	}
 
@@ -426,14 +427,54 @@ span{
 	}
 }
 
-		.data {
-			color: #29323a;
-			text-transform: uppercase;
-			font-weight: 600;
-			font-size: 16px;
-			.number {
-				color: #32a0ee;
-				font-size: 25px;
-				margin:0px 15px;
-			}
+.data {
+	color: #29323a;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 16px;
+	.number {
+		color: #32a0ee;
+		font-size: 25px;
+		margin:0px 15px;
+	}
+}
+
+.site_list{
+	table{
+		th{
 		}
+		td{
+			text-align: center;
+			overflow: hidden;
+		}
+		a{
+			text-decoration: none;
+		}
+	}
+}
+
+.warn{
+	color: #999999;
+	font-size: 14px;
+	.glyphicon{
+		padding-right: 5px;
+	}
+}
+
+.tagspecial{
+	width: 800px !important;
+	.action{
+		margin:0px -72px !important;
+	}
+}
+
+.campaigns_list{
+	.glyphicon-warning-sign{
+		color:#F1C359;
+		margin-left: 5px;
+	}
+	.glyphicon-ok-circle{
+		color: #81AD53;
+		margin-left: 5px;
+	}
+}

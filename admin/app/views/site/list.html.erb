@@ -4,7 +4,7 @@
 <%= stylesheet_link_tag "scss/tables" %>
 <% end %>
 
-<div id="pad-wrapper">
+<div id="pad-wrapper" class="site_list">
 	<div class="table-wrapper products-table section">
 		<div class="row header">
 			<div class="col-md-9">
@@ -12,108 +12,149 @@
 			</div>
 			<div class="col-md-3 addnew">
 				<div class="pull-right">
-					<button class="btn-flat gray"><span class="glyphicon glyphicon-plus-sign"></span> サイトを新規登録</button>
+					<button class="btn-flat gray">
+						<span class="glyphicon glyphicon-plus-sign"></span>
+						サイトを新規登録
+					</button>
 				</div>
 			</div>
 		</div>
-		<div class="">
+		<div class="row filter-block">
+			<div class="col-md-12">
+				<div class="btn-group pull-left">
+					<button class="glow left large">タグ正常</button>
+					<button class="glow middle large">タグ未設置</button>
+					<button class="glow middle large">クーポン可</button>
+					<button class="glow right large">クーポン不可</button>
+				</div>
+				<input type="text" placeholder="絞込" class="search order-search pull-right"></div>
+		</div>
+		<div class="section">
 			<table class="table table-hover">
 				<thead>
 					<tr>
 						<th class="">サイト名</th>
 						<th class="">
 							<span class="line"></span>
-							データ取得状況
+							データ取得
 						</th>
 						<th class="">
 							<span class="line"></span>
-							コンバージョン取得状況
+							訪問数
 						</th>
 						<th class="">
 							<span class="line"></span>
-							クーポン配信設定
+							コンバージョン率
 						</th>
 						<th class="">
 							<span class="line"></span>
-							配信中クーポン数
+							クーポン配信数
+						</th>
+						<th class="">
+							<span class="line"></span>
+							コンバージョンリフト率
 						</th>
 						<th>
 							<span class="line"></span>
-							操作
+
 						</th>
-						<th></th>
 					</tr>
 				</thead>
 				<tbody>
 					<!-- row -->
 					<tr class="first">
 						<td>
-							<a href="#" class="name">Strapya</a>
+							<a href="#" class="name" target="_blank">Strapya</a>
 						</td>
 						<td>
-							<span class="label label-success">正常に取得中</span>
+							<span class="label label-success">正常</span>
 						</td>
+						<td>200,000</td>
+						<td>0.12%</td>
+						<td>120,000</td>
+						<td>+12.3%</td>
 						<td>
-							<span class="label label-success">正常に取得中</span>
-						</td>
-						<td>
-							<span class="label label-success">配信可能</span>
-						</td>
-						<td>3</td>
-						<td class="sitecog"> <i class="icon-cog"></i>
-						</td>
-						<td>
-							<%= link_to "ダッシュボード", projects_dashboard_path, :class =>"btn-flat primary"%>
+							<div class="btn-group">
+								<button type="button" class="btn btn-default">ダッシュボード</button>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-cog"></span>
+								</button>
+							</div>
 						</td>
 					</tr>
-					<!-- row -->
 					<tr>
 						<td>
-							<a href="#" class="name">Strapya</a>
+							<a href="#" class="name" target="_blank">Strapya</a>
 						</td>
 						<td>
-							<span class="label label-success">正常に取得中</span>
+							<span class="label label-success">正常</span>
 						</td>
+						<td>200,000</td>
+						<td>0.12%</td>
+						<td>120,000</td>
+						<td>+12.3%</td>
 						<td>
-							<span class="label label-success">正常に取得中</span>
-						</td>
-						<td>
-							<span class="label label-success">配信可能</span>
-						</td>
-						<td>3</td>
-						<td class="sitecog"> <i class="icon-cog"></i>
-						</td>
-						<td>
-							<%= link_to "ダッシュボード", projects_dashboard_path, :class =>"btn-flat primary"%>
+							<div class="btn-group">
+								<button type="button" class="btn btn-default">ダッシュボード</button>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-cog"></span>
+								</button>
+							</div>
 						</td>
 					</tr>
-
-					<!-- row -->
 					<tr>
 						<td>
-							<a href="#" class="name">Strapya</a>
+							<a href="#" class="name" target="_blank">Strapya</a>
 						</td>
 						<td>
-							<span class="label label-success">正常に取得中</span>
+							<span class="label label-success">正常</span>
+						</td>
+						<td>200,000</td>
+						<td>0.12%</td>
+						<td colspan="2">
+							<button type="" class="btn btn-primary btn-block">
+								<span class="glyphicon glyphicon-ok-circle"></span>
+								クーポン申込
+							</button>
 						</td>
 						<td>
-							<span class="label label-failed">取得停止中</span>
+							<div class="btn-group">
+								<button type="button" class="btn btn-default">ダッシュボード</button>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-cog"></span>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" class="name" target="_blank">Strapya</a>
 						</td>
 						<td>
-							<span class="label label-failed">配信不可</span>
+							<span class="label label-success">正常</span>
 						</td>
-						<td>3</td>
-						<td class="sitecog">
-							<i class="icon-cog"></i>
+						<td>200,000</td>
+						<td>0.12%</td>
+						<td colspan="2">
+							<button type="" class="btn btn-primary btn-block">
+								<span class="glyphicon glyphicon-ok-circle"></span>
+								クーポン申込
+							</button>
 						</td>
 						<td>
-							<%= link_to "ダッシュボード", projects_dashboard_path, :class =>"btn-flat primary"%>
+							<div class="btn-group">
+								<button type="button" class="btn btn-default">ダッシュボード</button>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-cog"></span>
+								</button>
+							</div>
 						</td>
 					</tr>
 
 				</tbody>
 			</table>
 		</div>
+		<span class="warn pull-right"><span class="glyphicon glyphicon-warning-sign"></span>上記のデータは当月分の集計値です。</span>
 	</div>
 
 </div>
