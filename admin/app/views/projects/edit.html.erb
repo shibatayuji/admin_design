@@ -13,7 +13,7 @@
 
 	<div class="row form-wrapper">
 		<!-- left column -->
-		<div class="col-md-9 with-sidebar">
+		<div class="col-md-11 with-sidebar">
 			<div class="container">
 				<div class="section user_edit">
 					<form class="form-holizontal">
@@ -28,7 +28,7 @@
 								<input class="form-control" type="text"></div>
 						</div>
 						<div class="actions">
-							<input type="button" class="btn-glow primary" value="設定変更">
+							<input type="button" class="btn btn-primary" value="設定変更">
 						</div>
 					</form>
 				</div>
@@ -45,9 +45,9 @@
 								<div class="section">
 									<form class="form-holizontal">
 									<div class="form-group">
-										<label class="col-md-4 control-label" >種類</label>
+										<label class="col-md-3 control-label" >種類</label>
 										<div class="col-md-8">
-											<select class="form-control">
+											<select class="selectpicker">
 												<option selected="">商品ページ</option>
 												<option>Custom selects</option>
 												<option>Pure css styles</option>
@@ -55,15 +55,15 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-md-4 control-label" >URL</label>
-										<div class="col-md-3">
-											<select class="form-control">
+										<label class="col-md-3 control-label" >URL</label>
+										<div class="col-md-4">
+											<select class="selectpicker">
 												<option selected="">前方一致</option>
 												<option>Custom selects</option>
 												<option>Pure css styles</option>
 											</select>
 										</div>
-										<div class="col-md-5">
+										<div class="col-md-4">
 											<input class="form-control" type="url"></div>
 									</div>
 									<div class="form-group">
@@ -102,19 +102,19 @@
 								<div class="section">
 									<form class="form-holizontal">
 									<div class="form-group">
-										<label class="col-md-4 control-label" >URL</label>
-										<div class="col-md-3">
-											<select class="form-control">
+										<label class="col-md-3 control-label" >URL</label>
+										<div class="col-md-4">
+											<select class="selectpicker">
 												<option selected="">前方一致</option>
 												<option>Custom selects</option>
 												<option>Pure css styles</option>
 											</select>
 										</div>
-										<div class="col-md-5">
+										<div class="col-md-4">
 											<input class="form-control" type="url"></div>
 									</div>
 									<div class="form-group">
-										<label class="col-md-4 control-label" >セレクタ</label>
+										<label class="col-md-3 control-label" >セレクタ</label>
 										<div class="col-md-8">
 											<input class="form-control" type="url"></div>
 									</div>
@@ -154,15 +154,15 @@
 								<div class="section">
 									<form class="form-holizontal">
 									<div class="form-group">
-										<label class="col-md-4 control-label" >IPアドレス</label>
-										<div class="col-md-3">
-											<select class="form-control">
+										<label class="col-md-3 control-label" >IPアドレス</label>
+										<div class="col-md-4">
+											<select class="selectpicker">
 												<option selected="">完全一致</option>
 												<option>Custom selects</option>
 												<option>Pure css styles</option>
 											</select>
 										</div>
-										<div class="col-md-5">
+										<div class="col-md-4">
 											<input class="form-control" type="url"></div>
 									</div>
 									<div class="form-group">
@@ -200,7 +200,7 @@
 								<form class="form-holizontal">
 								<div class="section">
 									<div class="form-group">
-										<label class="col-md-4 control-label" >パラメータ</label>
+										<label class="col-md-3 control-label" >パラメータ</label>
 										<div class="col-md-8">
 											<input class="form-control" type="url"></div>
 									</div>
@@ -241,7 +241,7 @@
 								<div class="section">
 									<form class="form-holizontal">
 									<div class="form-group">
-										<label class="col-md-4 control-label" >ドメイン</label>
+										<label class="col-md-3 control-label" >ドメイン</label>
 										<div class="col-md-8">
 											<input class="form-control" type="url" placeholder=".">
 											<span>サブドメインの場合は、複数指定する必要はございません。</span>
@@ -303,7 +303,7 @@ $(".acordion_title").hover(function(){
 },function(){
 	$(this).removeClass('active');
 });
-
+		 $('.selectpicker').selectpicker();
 	</script>
 
 <% end %>
