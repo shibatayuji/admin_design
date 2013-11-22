@@ -1,37 +1,38 @@
             <!-- edit form column -->
             <div class="tagsetting">
+                <div class="section">
+                    <h4><span class="label label-primary">Step1</span>計測タグの設置</h4>
+                    <p>
+                        下記のタグをコピーして、 <strong>『登録したいサイトの全ページ』</strong>
+                        のソース最下部にある
+                        <br/>
+                        <code>&lt;/body&gt;</code>
+                        タグの直前に挿入してください。
+                    </p>
+                    <pre>&lt;script type="text/javascript" src="//f1.zenclerk.com/publish/hogehoge/a.js"&gt;&lt;/script&gt;</pre>
 
-                <h4>計測タグの設置方法</h4>
-                <p>
-                    下記のタグをコピーして、 <strong>『登録したいサイトの全ページ』</strong>
-                    のソース最下部にある
-                    <br/>
-                    <code>&lt;/body&gt;</code>
-                    タグの直前に挿入してください。
-                </p>
-                <pre>&lt;script type="text/javascript" src="//f1.zenclerk.com/publish/hogehoge/a.js"&gt;&lt;/script&gt;</pre>
-
-                <img src="/assets/img_assets/sample.gif" style="width:400px; height:200px;">
-                <hr>
-
-                <h4>コンバージョンタグの設定方法</h4>
+                    <img src="/assets/img_assets/sample.gif" style="width:400px; height:200px;">
+                    <hr>
+                </div>
+                <div class="section">
+                <h4><span class="label label-primary">Step2</span>コンバージョンタグの設置</h4>
                 <p>
                     下記のタグを、 <strong>『決済完了ページ』</strong>
                     に設置した
                     <strong>『計測タグ直上』</strong>
                     に記述してください。
                     <br/>
-                    <span class="text-error">赤く表示</span>
+                    <span class="text-danger">赤く表示</span>
                     されている部分は、購入された商品に合わせて変更が必要です。
                 </p>
                 <pre>
 &lt;script&gt;
-var zenclerk_conversion_id = &quot;<span class="text-error">*****</span>&quot;;
-var zenclerk_conversion_name = &quot;<span class="text-error">conversion_items</span>&quot;;
-var zenclerk_conversion_price = <span class="text-error">400</span>;
+var zenclerk_conversion_id = &quot;<span class="text-danger">*****</span>&quot;;
+var zenclerk_conversion_name = &quot;<span class="text-danger">conversion_items</span>&quot;;
+var zenclerk_conversion_price = <span class="text-danger">400</span>;
 var zenclerk_conversion_items = [
-  { id: &quot;<span class="text-error">****</span>&quot;, price: <span class="text-error">200</span>, count: <span class="text-error">1</span> },
-  { id: &quot;<span class="text-error">****</span>&quot;, price: <span class="text-error">100</span>, count: <span class="text-error">2</span> }
+  { id: &quot;<span class="text-danger">****</span>&quot;, price: <span class="text-danger">200</span>, count: <span class="text-danger">1</span> },
+  { id: &quot;<span class="text-danger">****</span>&quot;, price: <span class="text-danger">100</span>, count: <span class="text-danger">2</span> }
 ];
 &lt;/script&gt;
 </pre>
@@ -39,61 +40,64 @@ var zenclerk_conversion_items = [
                 <table class="table table-bordered">
                     <thead>
                         <tr>
+                            <th>必須・推奨</th>
                             <th>selecter名</th>
                             <th>説明</th>
                             <th>入力方法</th>
-                            <th>必須・推奨</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td>
+                                <span class="text-danger">必須</span>
+                            </td>
                             <td>zenclerk_conversion_id</td>
                             <td>
                                 ECシステムのコンバージョンID <sup>（＊１）</sup>
                             </td>
                             <td>文字列</td>
-                            <td>
-                                <span class="text-error">必須</span>
-                            </td>
+
                         </tr>
                         <tr>
+                            <td>
+                                <span class="text-danger">必須</span>
+                            </td>
                             <td>zenclerk_conversion_name</td>
                             <td>
                                 コンバージョン名 <sup>（＊２）</sup>
                             </td>
                             <td>文字列</td>
-                            <td>
-                                <span class="text-error">必須</span>
-                            </td>
+
                         </tr>
                         <tr>
+                            <td>
+                                <span class="text-danger">必須</span>
+                            </td>
                             <td>zenclerk_conversion_price</td>
                             <td>
                                 コンバージョン金額総額
                                 <sup>（＊３）</sup>
                             </td>
                             <td>数値</td>
-                            <td>
-                                <span class="text-error">必須</span>
-                            </td>
+
                         </tr>
                         <tr>
+                            <td>任意</td>
                             <td>zenclerk_conversion_items / id</td>
                             <td>ECシステムの商品ID</td>
                             <td>文字列</td>
-                            <td>任意</td>
                         </tr>
                         <tr>
+                            <td>任意</td>
                             <td>zenclerk_conversion_items / price</td>
                             <td>商品単価</td>
                             <td>数値</td>
-                            <td>任意</td>
                         </tr>
                         <tr>
+                            <td>任意</td>
                             <td>zenclerk_conversion_items / count</td>
                             <td>個数</td>
                             <td>数値</td>
-                            <td>任意</td>
                         </tr>
                     </tbody>
                 </table>
@@ -105,5 +109,50 @@ var zenclerk_conversion_items = [
                     <br/>
                     （＊３） コンバージョン金額（円）をカンマなし通貨記号なしの数値のみで入力して下さい。
                 </small>
+                <hr>
+            </div>
+            <div class="section">
+                    <h4><span class="label label-primary">Step3</span>詳細項目の設定</h4>
+                    <p>
+                        <%= link_to "サイト情報変更ページ",projects_edit_path%>から設定可能な、下記の項目を設定いただくと、より精度の高い計測・キャンペーン配信が可能です。
+                    </p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>必須・推奨</th>
+                            <th>設定名</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>推奨</td>
+                            <td>ページの種類</td>
+                            <td>あれやこれやｇほあｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄ</td>
+                        </tr>
+                        <tr>
+                            <td>推奨</td>
+                            <td>カートボタン</td>
+                            <td>あれやこれやｇほあｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄ</td>
+                        </tr>
+                        <tr>
+                            <td>推奨</td>
+                            <td>IPアドレス・フィルター</td>
+                            <td>あれやこれやｇほあｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄ</td>
+                        </tr>
+                        <tr>
+                            <td>推奨</td>
+                            <td>IPアドレス・フィルター</td>
+                            <td>あれやこれやｇほあｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄ</td>
+                        </tr>
+                        <tr>
+                            <td>推奨</td>
+                            <td>クッキー</td>
+                            <td>あれやこれやｇほあｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄふぁｓｄ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                    <hr>
+            </div>
 
             </div>

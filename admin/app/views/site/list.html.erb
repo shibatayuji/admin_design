@@ -6,29 +6,17 @@
 
 <div id="pad-wrapper" class="site_list">
 	<div class="table-wrapper products-table section">
-		<div class="row header">
-			<div class="col-md-9">
-				<h3>サイト一覧</h3>
-			</div>
-			<div class="col-md-3 addnew">
-				<div class="pull-right">
-					<button class="btn-flat gray">
-						<span class="glyphicon glyphicon-plus-sign"></span>
-						サイトを新規登録
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="row filter-block">
-			<div class="col-md-12">
-				<div class="btn-group pull-left">
-					<button class="glow left large">タグ正常</button>
-					<button class="glow middle large">タグ未設置</button>
-					<button class="glow middle large">クーポン可</button>
-					<button class="glow right large">クーポン不可</button>
-				</div>
-				<input type="text" placeholder="絞込" class="search order-search pull-right"></div>
-		</div>
+        <div class="row header">
+            <div class="col-md-6">
+                <h3>サイト一覧</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="pull-right datepick">
+                        <span>集計期間選択</span>
+                        <input class="form-control" type="text" placeholder="2013/10/12 19:00">
+                </div>
+            </div>
+        </div>
 		<div class="section">
 			<table class="table table-hover">
 				<thead>
@@ -154,7 +142,12 @@
 				</tbody>
 			</table>
 		</div>
-		<span class="warn pull-right"><span class="glyphicon glyphicon-warning-sign"></span>上記のデータは当月分の集計値です。</span>
+			<div class="addnew">
+				<%=link_to projects_new_path,:class=>"btn-flat gray" do%>
+						<span class="glyphicon glyphicon-plus-sign"></span>
+						サイトを新規登録
+				<%end%>
+			</div>
 	</div>
 
 </div>

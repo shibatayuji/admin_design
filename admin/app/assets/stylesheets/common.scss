@@ -25,17 +25,14 @@
 }
 
 .setting {
-background-color:rgb(253,253,253);
-border-color:rgb(232,233,238);
-border-width:1px;
-border-radius:1px;
-border-style:solid;
-padding: 15px;
+	text-align: center;
 margin-bottom: 30px;
-border-radius: 3px;
-	h5{
-		margin-bottom:10px;
-	}
+.panel-title{
+	font-size: 13px;
+	font-weight: bold;
+}
+.panel-body{
+}
 }
 
 .icon-question-sign{
@@ -420,7 +417,13 @@ margin:20px 20px;
 
 .tagsetting{
 	h4{
-		margin-bottom:15px;
+		margin-bottom:30px;
+		span{
+			margin-right: 10px;
+		}
+		p{
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -429,6 +432,9 @@ margin:20px 20px;
 }
 
 .addnew{
+	btn-flat{
+	text-align: center;
+	}
 	span{
 		margin-right:10px;
 	}
@@ -482,21 +488,61 @@ margin:20px 20px;
 	}
 }
 
-.campaigns_list{
+.campaigns_list,.campaign_show{
 	.glyphicon-warning-sign{
 		color:#F1C359;
 		margin-left: 5px;
 	}
-	.glyphicon-ok-circle{
+	.glyphicon-ok-sign{
 		color: #81AD53;
 		margin-left: 5px;
 	}
 }
 
-.alert{
-	width: 400px;
-	position: fixed;
-	top:55px;
-	right: 10px;
-	z-index: 1024;
+.resulttable{
+	table{
+		table-layout: fixed;
+	}
+	th{
+		text-align: center;
+	}
+	td{
+		text-align: center;
+		font-weight: bold;
+		font-size: 15px;
+	}
+	span{
+		font-size: 13px;
+		display: block;
+		color:#999999;
+		font-weight: normal;
+	}
+}
+
+.campaign_show{
+	min-width: 800px;
+	.head{
+		margin-bottom: 40px;
+		.head1{
+			height: 35px;
+			line-height: 35px;
+			margin-bottom: 10px;
+		}
+		.head2{
+			height: 25px;
+		}
+		.label{
+			margin-right: 10px;
+		}
+		h3{
+		}
+	}
+	.section{
+		h4{
+			margin-bottom: 20px;
+		}
+		caption{
+			text-align: left;
+		}
+	}
 }
