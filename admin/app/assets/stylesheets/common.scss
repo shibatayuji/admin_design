@@ -35,11 +35,21 @@ margin-bottom: 30px;
 }
 }
 
-.icon-question-sign{
-	margin-left: 5px;
-	font-size: 15px;
+.tooltip-inner{
+	padding: 10px;
+	max-width: 350px;
 }
 
+.ttp{
+	display: inline-block !important;
+	cursor: help;
+	margin-left: 5px;
+	color:#33455A !important;
+	text-decoration: none !important;
+	.icon-question-sign{
+		font-size: 15px;
+	}
+}
 .section{
 	margin-bottom: 40px;
 	h5{
@@ -546,3 +556,4 @@ margin:20px 20px;
 		}
 	}
 }
+
