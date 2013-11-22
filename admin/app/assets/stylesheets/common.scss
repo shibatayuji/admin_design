@@ -557,3 +557,41 @@ margin:20px 20px;
 	}
 }
 
+.signup_success {
+
+	padding-top: 40px;
+	margin-bottom: 100px;
+	.congraturation{
+		font-size: 120px;
+		color:#81AD53;
+	}
+	.center{
+		margin: 0 auto;
+		text-align: center;
+		width:42%;
+		h6{
+			color: #364453;
+			font-weight: bold;
+			margin: 30px 0 9px;
+			font-size: 16px;
+		}
+		p{
+			color: #364453;
+			font-size: 15px;
+		}
+		a {
+			margin-top: 30px;
+		}
+	}
+}
+
+.modal-title{
+	text-align: center;
+}
+.modal-body{
+	h5{
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+}

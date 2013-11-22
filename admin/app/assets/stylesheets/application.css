@@ -20,4 +20,5 @@
  *= require font-awesome
  *= require lib/alertify.core
  *= require lib/alertify.default
+ *= require lib/bootstrap-select
  */

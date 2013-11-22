@@ -23,9 +23,9 @@
             "navbar-brand" do%>
             <img src="/assets/logo.png">
             <%end%></div>
-        <ul class="nav navbar-nav pull-right hidden-xs">
+        <ul class="nav navbar-nav pull-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown">
                     ho.mu.zu@gmail.com <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -36,6 +36,11 @@
                     <li>
                         <%= link_to "ログアウト", users_login_path%></li>
                 </ul>
+            </li>
+            <li class="settings hidden-xs">
+                <a role="button" data-toggle="modal" data-target="#myModal">
+                    <i class="icon-envelope"></i>
+                </a>
             </li>
         </ul>
     </header>
@@ -60,6 +65,8 @@
     </div>
 
     <div class="content">
-        <%= yield %></div>
+        <%= yield %>
+    </div>
+    <%=render :partial =>'/share/voice'%>
 </body>
 </html>

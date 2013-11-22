@@ -6,17 +6,16 @@
 
 <div id="pad-wrapper" class="site_list">
 	<div class="table-wrapper products-table section">
-        <div class="row header">
-            <div class="col-md-6">
-                <h3>サイト一覧</h3>
-            </div>
-            <div class="col-md-6">
-                <div class="pull-right datepick">
-                        <span>集計期間選択</span>
-                        <input class="form-control" type="text" placeholder="2013/10/12 19:00">
-                </div>
-            </div>
-        </div>
+		<div class="row header">
+			<div class="col-md-6">
+				<h3>サイト一覧</h3>
+			</div>
+			<div class="col-md-6">
+				<div class="pull-right datepick">
+					<span>集計期間選択</span>
+					<input class="form-control" type="text" placeholder="2013/10/12 19:00"></div>
+			</div>
+		</div>
 		<div class="section">
 			<table class="table table-hover">
 				<thead>
@@ -99,11 +98,11 @@
 						</td>
 						<td>200,000</td>
 						<td>0.12%</td>
-						<td colspan="2">
-							<button type="" class="btn btn-primary btn-block">
-								<span class="glyphicon glyphicon-ok-circle"></span>
-								クーポン配信申込
-							</button>
+						<td>
+							-
+						</td>
+						<td>
+							-
 						</td>
 						<td>
 							<div class="btn-group">
@@ -123,11 +122,11 @@
 						</td>
 						<td>200,000</td>
 						<td>0.12%</td>
-						<td colspan="2">
-							<button type="" class="btn btn-primary btn-block">
-								<span class="glyphicon glyphicon-ok-circle"></span>
-								クーポン配信申込
-							</button>
+						<td>
+							-
+						</td>
+						<td>
+							-
 						</td>
 						<td>
 							<div class="btn-group">
@@ -142,12 +141,32 @@
 				</tbody>
 			</table>
 		</div>
-			<div class="addnew">
-				<%=link_to projects_new_path,:class=>"btn-flat gray" do%>
-						<span class="glyphicon glyphicon-plus-sign"></span>
-						サイトを新規登録
-				<%end%>
-			</div>
+		<div class="addnew">
+			<%=link_to projects_new_path,:class=>
+			"btn-flat gray" do%>
+			<span class="glyphicon glyphicon-plus-sign"></span>
+			サイトを新規登録
+			<%end%></div>
 	</div>
+
+	<!-- start signup_success -->
+	<div class="signup_success">
+		<div class="row header">
+		</div>
+		<div class="center">
+			<span class="congraturation glyphicon glyphicon-ok-sign"></span>
+			<h6>ユーザー登録に成功しました！</h6>
+			<p>
+				次に下記のボタンから、ZenClerkを導入する<br/>ウェブサイトを登録して下さい。
+			</p>
+					<div class="addnew">
+			<%=link_to projects_new_path,:class=>
+			"btn-flat gray" do%>
+			<span class="glyphicon glyphicon-plus-sign"></span>
+			サイトを新規登録
+			<%end%></div>
+		</div>
+	</div>
+	<!-- end signup_success -->
 
 </div>

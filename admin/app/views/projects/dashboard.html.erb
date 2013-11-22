@@ -99,7 +99,7 @@
 	<div class="section maingraph">
 		<div class="row">
 			<div class="col-md-4">
-				<select name="" class="form-control">
+				<select name="" class="selectpicker">
 					<option value="a">123</option>
 					<option value="a">123</option>
 				</select>
@@ -282,6 +282,8 @@
 		document.body.onload = draw("graphbox1");
 		document.body.onload = draw("graphbox2");
 		document.body.onload = draw("graphbox3");
+
+		$('.selectpicker').selectpicker();
 	</script>
 
 	<% end %>
