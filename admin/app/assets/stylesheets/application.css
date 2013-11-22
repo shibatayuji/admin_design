@@ -17,4 +17,7 @@
  *= require scss/icons
  *= require common
  *= require font-awesome
+ *= require font-awesome
+ *= require lib/alertify.core
+ *= require lib/alertify.default
  */
