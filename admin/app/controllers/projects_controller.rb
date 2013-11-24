@@ -11,4 +11,7 @@ class ProjectsController < ApplicationController
   def tag
   end
 
+  def detail
+  end
+
 end

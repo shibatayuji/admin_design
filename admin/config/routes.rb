@@ -1,4 +1,5 @@
 Admin::Application.routes.draw do
+  get "projects/detail"
   get "projects/tag"
   get "projects/edit"
   get "campaigns/list"

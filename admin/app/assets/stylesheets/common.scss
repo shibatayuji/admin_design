@@ -418,6 +418,10 @@ margin:20px 20px;
 		button{
 
 		}
+		.scrolltable{
+			height: 150px;
+			overflow: auto;
+		}
 	}
 
 	.aclast{
@@ -472,6 +476,7 @@ margin:20px 20px;
 .site_list{
 	table{
 		th{
+			text-align: center;
 		}
 		td{
 			text-align: center;
